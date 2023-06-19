@@ -10,8 +10,8 @@ export const InviteCodeInputModal: FC<Props> = ({ onRequestClose }) => {
   const [inviteCode, setInviteCode] = useState('');
 
   const handleValidation = () => {
-    const validCode = process.env.INVITE_CODE;
-    console.log(process.env);
+    // const validCode = process.env.INVITE_CODE;
+    const validCode = 'chat';
     if (inviteCode.trim() === validCode) {
       // alert('邀请码验证通过');
       onRequestClose();
