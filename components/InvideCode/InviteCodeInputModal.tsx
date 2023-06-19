@@ -9,19 +9,8 @@ interface Props {
 export const InviteCodeInputModal: FC<Props> = ({ onRequestClose }) => {
   const [inviteCode, setInviteCode] = useState('');
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onRequestClose();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [onRequestClose]);
-
   const handleValidation = () => {
-    const validCode = 'Chat';
+    const validCode = process.env.INVITE_CODE;
     if (inviteCode.trim() === validCode) {
       // alert('邀请码验证通过');
       onRequestClose();

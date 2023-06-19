@@ -24,7 +24,8 @@ const handler = async (req: Request): Promise<Response> => {
           Authorization: `Bearer ${key ? key : process.env.OPENAI_API_KEY}`
         }),
         ...(OPENAI_API_TYPE === 'azure' && {
-          'api-key': `${key ? key : process.env.OPENAI_API_KEY}`
+          'api-key': `${key ? key : process.env.OPENAI_API_KEY}`,
+          'invite-code':process.env.INVITE_CODE
         }),
         ...((OPENAI_API_TYPE === 'openai' && OPENAI_ORGANIZATION) && {
           'OpenAI-Organization': OPENAI_ORGANIZATION,
