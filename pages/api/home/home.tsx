@@ -35,6 +35,8 @@ import { Chat } from '@/components/Chat/Chat';
 import { Chatbar } from '@/components/Chatbar/Chatbar';
 import { Navbar } from '@/components/Mobile/Navbar';
 import Promptbar from '@/components/Promptbar';
+import { InviteCodeInputModal } from '@/components/InvideCode/InviteCodeInputModal';
+
 
 import HomeContext from './home.context';
 import { HomeInitialState, initialState } from './home.state';
@@ -346,6 +348,12 @@ const Home = ({
     serverSideApiKeyIsSet,
     serverSidePluginKeysSet,
   ]);
+  const [showInviteCodeModal, setShowInviteCodeModal] = useState(true);
+  const handleCloseInviteCodeModal = () => {
+    console.log('setShowInviteCodeModal', false)
+    setShowInviteCodeModal(false);
+  };
+
 
   return (
     <HomeContext.Provider
@@ -372,6 +380,9 @@ const Home = ({
         <main
           className={`flex h-screen w-screen flex-col text-sm text-white dark:text-white ${lightMode}`}
         >
+          {showInviteCodeModal && (
+            <InviteCodeInputModal onRequestClose={handleCloseInviteCodeModal} />
+          )}
           <div className="fixed top-0 w-full sm:hidden">
             <Navbar
               selectedConversation={selectedConversation}
