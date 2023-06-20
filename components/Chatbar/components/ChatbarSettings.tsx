@@ -42,7 +42,11 @@ export const ChatbarSettings = () => {
         <ClearConversations onClearConversations={handleClearConversations} />
       ) : null}
 
-      <Import onImport={handleImportConversations} />
+      {/* TODO: add adsense here */}
+      <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
+        AD Sense TBD here.</div>
+      {/* disable setting */}
+      {/* <Import onImport={handleImportConversations} />
 
       <SidebarButton
         text={t('Export data')}
@@ -67,7 +71,7 @@ export const ChatbarSettings = () => {
         onClose={() => {
           setIsSettingDialog(false);
         }}
-      />
+      /> */}
     </div>
   );
 };
