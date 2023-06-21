@@ -44,7 +44,8 @@ export const ChatbarSettings = () => {
         <ClearConversations onClearConversations={handleClearConversations} />
       ) : null}
 
-      <div>
+      <div className="px-3 pt-2 pb-3 text-center text-[5px] text-black/50 dark:text-white/50">
+        点击广告支持作者
         <GoogleAdSense />
       </div>
       {/* disable setting */}
