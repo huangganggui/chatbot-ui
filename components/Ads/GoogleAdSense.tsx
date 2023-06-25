@@ -7,7 +7,7 @@ export const GoogleAdSense = () => {
     <div>
       {/* Your other content goes here */}
       <Adsense
-        client="ca-pub-216573955128325"
+        client="ca-pub-2165739551283251"
         slot="8740003054"
 
         style={{ display: 'block' }}
