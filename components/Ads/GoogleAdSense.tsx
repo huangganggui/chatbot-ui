@@ -10,13 +10,12 @@ export const GoogleAdSense = () => {
         client="ca-pub-2165739551283251"
         slot="7007478358"
 
-        style={{ display: 'block' }}
-        format="auto"
-        responsive="true"
-
-        // style={{ width: 224, height: 100 }}
-        // format=""
+        // style={{ display: 'block' }}
+        // format="auto"
         // responsive="true"
+
+        style={{width: 260, height: 300 }}
+        format=""
 
         // style={{ display: 'block' }}
         // layout="in-article"

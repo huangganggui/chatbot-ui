@@ -7,8 +7,6 @@ import HomeContext from '@/pages/api/home/home.context';
 
 import { SettingDialog } from '@/components/Settings/SettingDialog';
 
-import { GoogleAdSense } from '@/components/Ads/GoogleAdSense';
-
 import { Import } from '../../Settings/Import';
 import { Key } from '../../Settings/Key';
 import { SidebarButton } from '../../Sidebar/SidebarButton';
@@ -45,8 +43,7 @@ export const ChatbarSettings = () => {
       ) : null}
 
       <div className="px-3 pt-2 pb-3 text-center text-[5px] text-black/50 dark:text-white/50">
-        点击广告支持作者
-        <GoogleAdSense />
+      {/* TODO: add wecat & support here */}
       </div>
       {/* disable setting */}
       {/* <Import onImport={handleImportConversations} />
